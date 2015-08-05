@@ -6,7 +6,7 @@ eXist Server installation via docker.
 
 ## Install and run ##
 * docker build -t exist .
-* docker run -P -d exist
+* docker run -p 8080:8080 -d exist
 
 
 
@@ -25,5 +25,5 @@ eXist Server installation via docker.
 	* Example
 		* click the open-Tab -> apps -> tei-simple -> doc -> documentation.xml
 		* click the run-Tab 
-			* If the run-Tab is disabled, close the file and opne it again
+			* If the run-Tab is disabled, reload the site
 		
