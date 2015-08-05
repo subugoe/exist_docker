@@ -26,10 +26,6 @@ VOLUME /opt/exist/webapp/WEB-INF/data/
 USER exist
 
 
-#ADD entrypoint.sh /entrypoint.sh
-#ENTRYPOINT /entrypoint.sh
-
-
 EXPOSE 8080
 
 # lets start exist...
