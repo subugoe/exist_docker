@@ -5,7 +5,6 @@ eXist Server installation via docker.
 * If texlive is required, edit the Dockerfile and change the comments below "install required tools and clean-up"
 
 ## Install and run ##
-* git clone \<repo\>
 * docker build -t exist .
 * docker run -P -d exist
 
@@ -13,7 +12,7 @@ eXist Server installation via docker.
 
 ## Usage ##
 * docker ps
-* http://<docker_host>:<exist_port_from_previous_output>
+* http://docker_host:exist_port_from_previous_output
 	* localhost or
 	* boot2docker ip 
 * Package Manager
