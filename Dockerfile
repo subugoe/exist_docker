@@ -2,8 +2,8 @@ FROM java:latest
 MAINTAINER Joerg-H. Panzer
 
 # install required tools and clean-up
-#RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get upgrade -y && apt-get install -y vi sudo wget git texlive-full && apt-get clean autoclean && apt-get autoremove && rm -rf /var/lib/{apt,dpkg,cache,log}
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get upgrade -y && apt-get install -y vi sudo wget git && apt-get clean autoclean && apt-get autoremove && rm -rf /var/lib/{apt,dpkg,cache,log}
+#RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get upgrade -y && apt-get install -y vim sudo wget git texlive-full && apt-get clean autoclean && apt-get autoremove && rm -rf /var/lib/{apt,dpkg,cache,log}
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get upgrade -y && apt-get install -y vim sudo wget git && apt-get clean autoclean && apt-get autoremove && rm -rf /var/lib/{apt,dpkg,cache,log}
 
 # building eXist-db develop (stable)
 RUN cd /opt &&  git clone https://github.com/eXist-db/exist.git
