@@ -6,7 +6,7 @@ eXist Server installation via docker.
 
 ## Install and run ##
 * docker build -t exist .
-* docker run -p 8080:8080 -d exist
+* docker run -p 8080:8080 -v $PWD/data/:/opt/exist/webapp/WEB-INF/data/ -d  exist
 
 
 
