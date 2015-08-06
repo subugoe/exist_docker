@@ -9,8 +9,7 @@ eXist Server installation via docker.
 * cd to_repo_path 
 * mkdir data/
 * docker build -t exist .
-* docker run -p 8080:8080  -d  exist
-
+* docker run -p 8080:8080 -v $PWD/data/:/opt/exist/webapp/WEB-INF/data/  exist
 
 
 ## Usage ##

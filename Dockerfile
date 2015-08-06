@@ -10,7 +10,7 @@ RUN cd /opt &&  git clone https://github.com/eXist-db/exist.git
 RUN cd /opt/exist &&  ./build.sh
 
 ENV EXIST_HOME /opt/exist/
-Volume /opt/exist/
+#Volume /opt/exist/
 WORKDIR /opt/exist/
 
 RUN mkdir -p /usr/local/share/fonts  
@@ -24,7 +24,7 @@ RUN cd /tmp  && \
 
 
 RUN useradd -s /bin/nologin exist && chown -R exist:exist /opt
-VOLUME /opt/exist/webapp/WEB-INF/data/
+#VOLUME $PWD/data/:/opt/exist/webapp/WEB-INF/data/
 USER exist
 
 
