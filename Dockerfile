@@ -8,10 +8,11 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get upgrade -y && apt-g
 # building eXist-db develop (stable)
 RUN cd /opt &&  git clone https://github.com/eXist-db/exist.git
 RUN cd /opt/exist &&  ./build.sh
-ENV EXIST_HOME /opt/exist/
-WORKDIR ${EXIST_HOME}
 
-# add unicode fonts
+ENV EXIST_HOME /opt/exist/
+Volume /opt/exist/
+WORKDIR /opt/exist/
+
 RUN mkdir -p /usr/local/share/fonts  
 RUN mkdir -p /usr/local/share/fonts/truetype  
 RUN cd /tmp  && \
