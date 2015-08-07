@@ -8,6 +8,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get upgrade -y && apt-g
 # building eXist-db develop (stable)
 RUN cd /opt &&  git clone https://github.com/eXist-db/exist.git
 RUN cd /opt/exist &&  ./build.sh
+RUN find /opt/exist/data/ -type d -print0 | xargs -0 --no-run-if-empty chmod 777
 
 ENV EXIST_HOME /opt/exist/
 #Volume /opt/exist/
