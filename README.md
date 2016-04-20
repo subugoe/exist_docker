@@ -8,8 +8,12 @@ eXist Server installation via docker.
 * clone the repo
 * cd to_repo_path 
 * mkdir data/
-* docker build -t exist .
-* docker run -p 8080:8080 -v $PWD/data/:/opt/exist/webapp/WEB-INF/data/  exist
+* with docker-compose
+	* docker-compose build
+	* docker-compose up -d
+* with docker
+	* docker build -t exist .
+	* docker run -p 8080:8080 -v $PWD/data/:/opt/exist/webapp/WEB-INF/data/  exist
 
 
 ## Usage ##
@@ -21,7 +25,7 @@ eXist Server installation via docker.
 	* User: admin
 	* Password: 
 	* Install: eXist-db Public Application Repository
-	* Install: TEI Simple Processing Model
+	* Install: TEI Simple Processing Model or TEI Processing Model Toolbox
 	* exit
 * eXide
 	* Example
