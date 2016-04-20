@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+
+  exist:
+    build: .
+    container_name: exist
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data/:/opt/exist/data/  # todo data dir (storage)
